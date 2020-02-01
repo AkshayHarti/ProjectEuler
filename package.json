@@ -1,0 +1,8 @@
+{
+  "name": "ProjectEuler",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:AkshayHarti/ProjectEuler.git",
+  "author": "akshay <akshay.r555@gmail.com>",
+  "license": "MIT"
+}
