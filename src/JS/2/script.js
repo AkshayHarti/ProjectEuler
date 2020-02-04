@@ -1,4 +1,4 @@
-const target = 1000
+const target = 32
 let startDate = new Date()
 let sum = mySolution(target)
 // sum = solutionByPE(target)
@@ -6,24 +6,27 @@ let endDate = new Date()
 
 // Performance: O(n)
 /***************************My solution**************************/
-function isMultipleOf5(num) {
-	return num % 5 === 0
+
+function fibonacci() {
+	if (memo[num]) return memo[num]
+	if (num == 0) return 1
+	if (num == 1) return 2
+
+	return (memo[num] = fibonacci(num - 1, memo) + fibonacci(num - 2, memo))
+}
+
+function evenFibonacciSum(limit) {
+	const memo = [1, 2]
+	const sum = 1
+	const i = 1
+
+	while (sum <= limit) {
+		memo[i + 1] = memo[i] + memo[i - 1]
+	}
 }
 
 function mySolution(target = 0) {
-	let sum = 0
-
-	for (let i = 3; i < target; i += 3) {
-		if (!isMultipleOf5(i)) {
-			sum += i
-		}
-	}
-
-	for (let i = 5; i < target; i += 5) {
-		sum += i
-	}
-
-	return sum
+	console.log(fibonacci(target))
 }
 
 // Performance: Constant time O(1)
